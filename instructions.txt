@@ -1,0 +1,9 @@
+1.Do
+
+pip install -r requirements.txt
+
+2. 
+Add Environment (.env) file and key
+
+3.
+Run Main.py

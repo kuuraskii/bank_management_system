@@ -224,7 +224,7 @@ Enter your choice (1-7): 1
 Enter User ID: 1
 Enter Name: John Doe
 
-Balance for John Doe: $5000
+Balance for John Doe: ₹5000
 ```
 
 #### Operation 2: Transfer Funds
@@ -235,16 +235,16 @@ Enter Sender Name: John Doe
 Enter Receiver ID: 2
 Enter Amount to Transfer: 500
 
-✓ Successfully transferred $500 from John Doe to Jane Smith
+✓ Successfully transferred ₹500 from John Doe to Jane Smith
 
 ============================================================
 TRANSACTION DETAILS
 ============================================================
 From: John Doe (ID: 1)
 To: Jane Smith (ID: 2)
-Amount: $500
-Sender Balance: $5000 → $4500
-Receiver Balance: $3000 → $3500
+Amount: ₹500
+Sender Balance: ₹5000 → ₹4500
+Receiver Balance: ₹3000 → ₹3500
 ============================================================
 ```
 

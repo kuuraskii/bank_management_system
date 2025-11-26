@@ -29,7 +29,7 @@ def check_balance_option(transfer_manager):
         success, message, balance = transfer_manager.check_balance(user_id, name)
         print("\n" + message)
         if success:
-            print(f"Balance: ${balance}")
+            print(f"Balance: ₹{balance}")
     except ValueError:
         print("Invalid User ID. Please enter a number.")
     except Exception as e:
@@ -112,7 +112,6 @@ def delete_account_option(transfer_manager):
     except Exception as e:
         print(f"Error: {e}")
 
-
 def view_all_users_option():
     """Handle view all users option."""
     db = DatabaseManager()
@@ -132,7 +131,7 @@ def view_all_users_option():
         email = user.get("email", "N/A")
         balance = user.get("balance", 0)
 
-        print(f"{user_id:<5} {name:<25} {email:<30} ${balance:<14}")
+        print(f"{user_id:<5} {name:<25} {email:<30} ₹{balance:<14}")
 
     print("=" * 80)
 

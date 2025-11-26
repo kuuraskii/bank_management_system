@@ -1,4 +1,6 @@
-
+"""
+Database module for Supabase operations.
+"""
 from supabase import create_client
 from config import SUPABASE_URL, SUPABASE_KEY
 from typing import Dict, Optional, List, Tuple

@@ -32,7 +32,7 @@ class TransferManager:
         if balance is None:
             return False, f"User with ID {user_id} and name '{name}' not found", None
 
-        return True, f"Balance for {name}: ${balance}", balance
+        return True, f"Balance for {name}: ₹{balance}", balance
 
     def transfer_funds(
         self, sender_id: int, sender_name: str, receiver_id: int, amount: int
@@ -70,7 +70,7 @@ class TransferManager:
         if sender_balance < amount:
             return (
                 False,
-                f"Insufficient balance. Current balance: ${sender_balance}, Required: ${amount}",
+                f"Insufficient balance. Current balance: ₹{sender_balance}, Required: ₹{amount}",
             )
 
         # Perform transfer
@@ -103,7 +103,7 @@ class TransferManager:
 
         return (
             True,
-            f"Successfully transferred ${amount} from {sender_name} to {receiver.get('name')}",
+            f"Successfully transferred ₹{amount} from {sender_name} to {receiver.get('name')}",
         )
 
     def get_transaction_history(self) -> list:
@@ -127,9 +127,9 @@ class TransferManager:
         print("=" * 60)
         print(f"From: {transaction['sender_name']} (ID: {transaction['sender_id']})")
         print(f"To: {transaction['receiver_name']} (ID: {transaction['receiver_id']})")
-        print(f"Amount: ${transaction['amount']}")
-        print(f"Sender Balance: ${transaction['sender_balance_before']} → ${transaction['sender_balance_after']}")
-        print(f"Receiver Balance: ${transaction['receiver_balance_before']} → ${transaction['receiver_balance_after']}")
+        print(f"Amount: ₹{transaction['amount']}")
+        print(f"Sender Balance: ₹{transaction['sender_balance_before']} → ₹{transaction['sender_balance_after']}")
+        print(f"Receiver Balance: ₹{transaction['receiver_balance_before']} → ₹{transaction['receiver_balance_after']}")
         print("=" * 60 + "\n")
 
     def create_account(self, name: str, email: str, initial_balance: int = 0) -> Tuple[bool, str, Optional[int]]:
